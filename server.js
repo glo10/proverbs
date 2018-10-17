@@ -3,7 +3,7 @@ const app = express();
 
 app.use(express.static('static'));
 
-//Data
+//data
 let proverbs = [
   {
     content : 'Tra il dire e il fare c\'è in mezzo il mare',
@@ -11,7 +11,7 @@ let proverbs = [
   },
   {
     content : 'Ad astra per aspera',
-    author : 'Sénèque'
+    author : 'Italien'
   },
   {
     content : 'Jquerira bien qui Jquerira le dernier',
@@ -39,11 +39,11 @@ let proverbs = [
   },
   {
     content : 'Parmi les hommes, le plus faible est celui qui ne sait pas garder un secret. Le plus fort, celui qui maîtrise sa colère, le plus patient, celui qui cache sa pauvreté, le plus riche, celui qui se contente de la part que dieu lui a faite',
-    author : 'Algérien'
+    author : 'Arabe'
   },
   {
     content:'Ne comptez pas les oeufs dans le derrière d\'une poule',
-    author:'Guadeloupéen'
+    author:'Français'
   }
 ];
 
