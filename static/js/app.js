@@ -4,11 +4,11 @@
   $(document).ready(function(){
     getAuthors();
     const blockquote = $('blockquote');
-    const choice = $('#authors');
-    const authorProverbs = $('#authorProverbs');
+    const selectAuthor = $('#selectAuthor');
+    const listAuthors = $('#listAuthors');
 
-    choice.on('change', function(){
-      authorProverbs.empty();
+    selectAuthor.on('change', function(){
+      listAuthors.empty();
       let proverbs = [];
       let author = $(this).val();
       fetch(baseUrl + '/author')
@@ -16,7 +16,7 @@
       .then(res => {
         for (let i = 0; i < res.length; i++) {
           if(author == res[i].author){
-            authorProverbs.append('<li class="list-group-item">' + res[i].content + '</li>');
+            listAuthors.append('<li class="list-group-item">' + res[i].content + '</li>');
           }
         }
       })
@@ -27,7 +27,7 @@
         .then(res => res.json())
         .then(res => {
           for (let i = 0; i < res.length; i++) {
-            choice.append('<option value="' + res[i].author + '">'+  res[i].author + '</option>');
+            selectAuthor.append('<option value="' + res[i].author + '">'+  res[i].author + '</option>');
           }
         })
     }
@@ -42,5 +42,5 @@
       })
     }
   });
-
+  
 })()

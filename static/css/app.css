@@ -1,1 +1,19 @@
+.container>section{
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
 
+blockquote{
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+section>article{
+  margin:20px;
+  width:50%;
+}
+
+article>ul>li{
+  word-wrap: break-word;
+}

@@ -9,17 +9,19 @@
   <body>
     <main class="container">
       <h1 class="display-5">Proverbes</h1>
-      <article>
-        <blockquote cite="http://localhost:4002/proverb" class="display-6 text-info"></blockquote>
-      </article>
-      <article>
-        <select name="authors" id="authors">
-          <option value="-1" selected disabled>Sélectionnez un auteur</option>
-        </select>
+      <section>
+        <!-- <h2>Liste des proverbes</h2> -->
         <article>
-          <ul class="list-group" id="authorProverbs"></ul>
+          <h3 class="text-primary">Affichage aléatoire toutes les 5 sécondes...</h3>
+          <blockquote cite="http://localhost:4002/proverb" class="display-6 text-warning"></blockquote>
         </article>
-      </article>
+        <article>
+          <select name="authors" id="selectAuthor">
+            <option value="-1" selected disabled>Sélectionnez un auteur</option>
+          </select>
+          <ul class="list-group" id="listAuthors"></ul>
+        </article>
+      </section>
     </main>
     <script src="js/jquery.js"></script>
     <script src="js/app.js"></script>
